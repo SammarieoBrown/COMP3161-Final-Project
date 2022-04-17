@@ -14,10 +14,18 @@ Create table Vehicle(
     serialNum varchar(10) not null,
     model varchar(55),
     year varchar(4),
-    estimatedValue int,
+    estimatedValue decimal(10,2), ---Idk if you wanna change this values---
     make varchar(55),
     Primary Key(serialNum)
 
+);
+
+Create table Vendor(
+    vendorID varchar(10) not null,
+    name varchar(55),
+    phoneNum varchar(10),
+    address varchar(255),
+    Primary Key(vendorID)
 );
 
 Create table Car(
@@ -76,13 +84,7 @@ Create Table VehicleParts(
     Foreign Key(ManuID) REFERENCES Manufacturer(ManuID)
     );
 
-Create table Vendor(
-    vendorID varchar(10) not null,
-    name varchar(55),
-    phoneNum varchar(10),
-    address varchar(255),
-    Primary Key(vendorID)
-);
+
 
 Create table Mechanic(
     mechanicID varchar(10) not null,
@@ -142,10 +144,10 @@ VALUES
 
 # ----------------- Insert into vehicle  table ------------------
 
-insert into vehicle(serialNum, model, year, estimatedValue, make)
+insert into vehicle(serialNum, model, year, estimatedValue, make) --- Estimated Values is not a string----
 VALUES
-('1000', 'A5', '2022', '1200000', 'Audi'),
-('1010', 'Civic', '2020', '3500000', 'Honda'),
+('1000', 'A5', '2022', 1200000.29, 'Audi'),
+('1010', 'Civic', '2020', 3500000.27, 'Honda'),
 ('1020', 'Vitz', '2009', '9000000', 'Toyota'),
 ('1030', 'Tacoma', '2001', '850000', 'Toyota'),
 ('1040', 'Tacoma', '2001', '850000', 'Toyota'),
