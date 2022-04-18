@@ -185,19 +185,18 @@ VALUES
 # ----------------- Insert into vehicleparts  table ------------------
 insert into vehicleparts(serialNum, partID, year, name, ManuID, vendorID)
 VALUES
-('2000', '882OLW', '2017', 'Front Bumper', '5002',null),
-('2001', 'SENSEKR26','2019', 'Tires', '5012',null),
-('2002', '883AVP','2019', 'Exhaust', null,'7003'),
-('2003', '540ULO','2020', 'Side View Mirror', '5012',null),
-('2004', '570JJL','2020', 'Battery', '5010',null),
-('2005', '821ONW','2017', 'Brakes',null,'7012'),
-('2006', 'SEER26','2019', 'Front Axle', '5001',null),
-('2007', '911KVP','2019', 'Alternator', '5010',null),
-('2008', '540UJO','2020', 'Radiator', '5012','7003'),
-('2010', '899OLW','2017', 'Engine', '5003','7004'),
-('2011', 'SENS23', '2019', 'Transmission', '7001',null),
-('2012', '906AVP','2019', 'Muffler', null,'7010');
-
+('1200', '2000', '2017', 'Front Bumper', '5002',null),
+('1040', '2001','2019', 'Tires', '5012',null),
+('1030', '2002','2019', 'Exhaust', null,'7003'),
+('1020', '2003','2020', 'Side View Mirror', '5012',null),
+('1170', '2004','2020', 'Battery', '5010',null),
+('1180', '2005','2017', 'Brakes',null,'7012'),
+('1090', '2006','2019', 'Front Axle', '5001',null),
+('1060', '2007','2019', 'Alternator', '5010',null),
+('1140', '2008','2020', 'Radiator', '5012','7003'),
+('1120', '2009','2017', 'Engine', '5003','7004'),
+('1010', '2010', '2019', 'Transmission',null, '7001'),
+('1110', '2011','2019', 'Muffler', null,'7010');
 
 # ----------------- Insert into vehicle Invoice  table ------------------
 insert into VehicleInvoice(invoiceNum, serialNum, date, total)
