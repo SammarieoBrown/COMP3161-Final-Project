@@ -168,7 +168,6 @@ VALUES
 
 insert into Vendor(vendorID, name, phoneNum, address)
 VALUES
-
 ('7001', 'Carla March', '8768948588', '99 Highway Road'),
 ('7002', 'Morgan Freeman', '8767455216', '599 Mango Path'),
 ('7003', 'Eddie Campbell', '8769473567', '31 Portmore Pines'),
@@ -177,7 +176,7 @@ VALUES
 ('7006', 'Kimone March', '8766344276', '99 Uptown Park'),
 ('7007', 'Shelly Goodwin', '8768433421', '599 Applecider Ave'),
 ('7008', 'Victor Newman', '8766355142', '90 Boardwalk Center'),
-('7009', 'Serena Williams', '87676342663', '976 AskPath Road'),
+('7009', 'Serena Williams', '8767634263', '976 AskPath Road'),
 ('7010', 'Tyson Kidd', '8766134253', '348 Mystic Road'),
 ('7011', 'Kareen Logan', '8768087436', '10 Middleton Road'),
 ('7012', 'Angelina Perry', '8767990912', '6275 Forbes Lane');
