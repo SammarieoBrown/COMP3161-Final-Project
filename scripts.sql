@@ -359,4 +359,27 @@ on vehicleparts.serialNum = vehicle.serialNum
 where vendorID is not null;
 
 /*********** Indexes ****************/
+
+/*********** Indexes ****************/
+
+/* indexes on Vehicle Invoice*/
+create unique index idx_invoiceNum
+on VehicleInvoice(invoiceNum, total);
+
+
+/* indexes on Vehicle Parts Table*/
+
+create unique index idx_VehicleParts
+on VehicleParts(partID,serialNum,ManuID,vendorID);
+
+
+/* indexes on Customer Table*/
+
+create unique index idx_customer
+on Customer(customerID,name,phoneNum);
+
+/* indexes on Customer Table*/
+
+create unique index idx_mechanic
+on Mechanic(mechanicID ,name,phoneNum);
 /*********Stored Procedure***********/
