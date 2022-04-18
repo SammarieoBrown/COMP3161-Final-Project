@@ -127,7 +127,7 @@ VALUES
 ('5008', 'Lisa Hanna', '8763820399', '2192 South Camp Rd'),
 ('5009', 'Lewis Lane', '8768473832', '10 King Street'),
 ('5010', 'Leslie Edwards', '8766439234', '32 Marcus Lane'),
-('5011', 'Lucas Hunt', '87625483943', '98 Rosa Park'),
+('5011', 'Lucas Hunt', '8762548343', '98 Rosa Park'),
 ('5012', 'Everton Brown', '8769374922', '2 North Lane'),
 ('5013', 'Sophia Scott', '8763729471', '343 Elevator Path'),
 ('5014', 'Max Lords', '8766483267', '108 Camp Road'),
