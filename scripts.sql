@@ -106,7 +106,8 @@ Create table VehicleInvoice(
     invoiceNum varchar(10) not null,
     serialNum varchar(10),
     date date,
-    total float);
+    total decimal(10,2)
+    );
 
 
 
