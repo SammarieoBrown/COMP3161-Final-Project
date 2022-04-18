@@ -303,15 +303,18 @@ VALUES
 ('1130','6012','White','Diesel',2,null,'7007');
 
 # ----------------- Views ------------------
+/** Discount given on vehicles sold**/
 Create View Discount as 
 Select make,model,(estimatedValue-total) as discount from vehicle
 Inner Join vehicleinvoice
 on Vehicle.serialNum = vehicleinvoice.serialNum;
 
+/** Vehicle with prices above the average**/
 Create View ExpensiveVehicle AS
 Select make,model, estimatedValue from vehicle 
 where estimatedValue > (Select avg(estimatedValue) from vehicle);
 
+/** Vehicle and Vehicle Parts sold by Manufacturer**/
 Create view ManufacturerSold as 
 Select make,model,bikecolor as Identifier from vehicle 
 inner join bike 
@@ -331,9 +334,29 @@ union
 Select make,vehicle.model,name from vehicle 
 inner join vehicleparts
 on vehicleparts.serialNum = vehicle.serialNum
-where manuID is not null
+where manuID is not null;
 
-
+/** Vehicle and Vehicle Parts sold by Vendor**/
+Create view VendorSold as 
+Select make,model,bikecolor as Identifier from vehicle 
+inner join bike 
+on bike.serialNum = vehicle.serialNum
+where vendorID is not null
+union 
+Select make,model,carcolor from vehicle 
+inner join car
+on car.serialNum = vehicle.serialNum
+where vendorID is not null
+union 
+Select make,model,truckcolor from vehicle 
+inner join truck
+on truck.serialNum = vehicle.serialNum
+where vendorID is not null
+union 
+Select make,vehicle.model,name from vehicle 
+inner join vehicleparts
+on vehicleparts.serialNum = vehicle.serialNum
+where vendorID is not null;
 
 # ----------------- Indexes ------------------
 # ----------------- Stored Procedure ------------------
