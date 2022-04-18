@@ -295,7 +295,7 @@ VALUES
 ('1140','6004','Red','Diesel',2,'5007',null),
 ('1160','6005','Blue','Diesel',2,null,'7007'), 
 ('1200','6006','White','Diesel',2,null,'7001'),
-('1190''6007','Blue','Diesel',2,'5015',null),
+('1190','6007','Blue','Diesel',2,'5015',null),
 ('1160','6008','Grey','Diesel',2,'5012',null),
 ('1170','6009','Black','Diesel',2,null,'7003'),
 ('1190','6010','Blue','Diesel',2,'5001',null),
