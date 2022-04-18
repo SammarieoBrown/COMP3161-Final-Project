@@ -306,7 +306,11 @@ VALUES
 Create View discount as 
 Select make,model,(estimatedValue-total) as discount from vehicle
 Inner Join vehicleinvoice
-on Vehicle.serialNum = vehicleinvoice.serialNum
+on Vehicle.serialNum = vehicleinvoice.serialNum;
+
+Create View ExpensiveVehicle AS
+Select make,model, estimatedValue from vehicle 
+where estimatedValue > (Select avg(estimatedValue) from vehicle);
 
 
 # ----------------- Indexes ------------------
