@@ -1,4 +1,6 @@
-
+/** Group 19
+Anna-Kay Graham-620127950
+**/
 Create database dealership;
 Use dealership;
 
