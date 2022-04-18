@@ -312,6 +312,27 @@ Create View ExpensiveVehicle AS
 Select make,model, estimatedValue from vehicle 
 where estimatedValue > (Select avg(estimatedValue) from vehicle);
 
+Create view ManufacturerSold as 
+Select make,model,bikecolor as Identifier from vehicle 
+inner join bike 
+on bike.serialNum = vehicle.serialNum
+where manuID is not null
+union 
+Select make,model,carcolor from vehicle 
+inner join car
+on car.serialNum = vehicle.serialNum
+where manuID is not null
+union 
+Select make,model,truckcolor from vehicle 
+inner join truck
+on truck.serialNum = vehicle.serialNum
+where manuID is not null
+union 
+Select make,vehicle.model,name from vehicle 
+inner join vehicleparts
+on vehicleparts.serialNum = vehicle.serialNum
+where manuID is not null
+
 
 
 # ----------------- Indexes ------------------
