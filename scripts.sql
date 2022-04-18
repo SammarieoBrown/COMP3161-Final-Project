@@ -112,7 +112,7 @@ Create table VehicleInvoice(
 
 
 
-# ----------------- Insert into manufacturer  table ------------------
+----------------- Insert into manufacturer  table ------------------
 
 insert into manufacturer(manuid, name, phonenum, address)
 
@@ -133,11 +133,11 @@ VALUES
 ('5014', 'Max Lords', '8766483267', '108 Camp Road'),
 ('5015', 'Nick Minaj', '8766432354', '03 Downtown ');
 
-# ----------------- Insert into vehicle table ------------------
+ ----------------- Insert into vehicle table ------------------
 
 insert into vehicle(serialNum, model, year, estimatedValue, make) 
 VALUES
-###### CARS 
+---- CARS ----
 ('1000', 'A5', '2022', 1200000.29, 'Audi'),
 ('1010', 'Civic', '2020', 3500000.27, 'Honda'),
 ('1020', 'Vitz', '2009', 900000.93, 'Toyota'),
@@ -145,7 +145,7 @@ VALUES
 ('1040', 'Altima', '2012', 1050000.00, 'Nissan'),
 ('1050', 'fit', '2018',2500000.00 , 'Honda'),
 ('1060', 'R8', '2020',7000000.99, 'Audi'),
-###### BIKES
+----BIKES----
 ('1070','CB Series','2009',500000.00,'Honda'),
 ('1080','Fury','2020',1500000.00,'Honda'),
 ('1090','Katana','2021',1000000.00,'Suzuki'),
@@ -154,7 +154,7 @@ VALUES
 ('1120','GSX','2012',800000.00,'Suzuki'),
 ('1130','Rita','2020',1500000.00,'Naza'),
 
-##### TRUCKS
+---- TRUCKS----
 ('1140','Actros','2020',5000000.00,'Mercedes-Benz'),
 ('1150','MD26','2006',700000.00,'Bering'),
 ('1160','LD15A','2000',500000.00,'Bering'),
@@ -164,7 +164,7 @@ VALUES
 ('1200','Model 220','2017',2900000.00,'Peterbilt');
 
 
-# ----------------- Insert into Vendor table ------------------
+ ----------------- Insert into Vendor table ------------------
 
 insert into Vendor(vendorID, name, phoneNum, address)
 VALUES
@@ -183,7 +183,7 @@ VALUES
 ('7012', 'Angelina Perry', '8767990912', '6275 Forbes Lane');
 
 
-# ----------------- Insert into vehicleparts  table ------------------
+ ----------------- Insert into vehicleparts  table ------------------
 insert into vehicleparts(serialNum, partID, year, name, ManuID, vendorID)
 VALUES
 ('1200', '2000', '2017', 'Front Bumper', '5002',null),
@@ -199,7 +199,7 @@ VALUES
 ('1010', '2010', '2019', 'Transmission',null, '7001'),
 ('1110', '2011','2019', 'Muffler', null,'7010');
 
-# ----------------- Insert into vehicle Invoice  table ------------------
+----------------- Insert into vehicle Invoice  table ------------------
 insert into VehicleInvoice(invoiceNum, serialNum, date, total)
 VALUES
 ('1301','1000','2020-10-01',1150000.00),
@@ -215,7 +215,7 @@ VALUES
 ('1311','1080','2021-08-19',1500000.00),
 ('1312','1050','2020-12-25',2500000.00);
 
-# ----------------- Insert into mechanic table ------------------
+----------------- Insert into mechanic table ------------------
 insert into mechanic(mechanicID, name, phoneNum, address) 
 VALUES
 ('8001', 'Paul Smith', '8765483443', '45 Seesaw Road'),
@@ -231,7 +231,7 @@ VALUES
 ('8011', 'Dayvon Reid', '8768900956', '10 Pathway Garden'),
 ('8012', 'Durk Royale', '8763037732', '99 Eaglewood Lane');
 
-# ----------------- Insert into Customer  table ------------------
+----------------- Insert into Customer  table ------------------
 
 insert into customer(customerID, name, phoneNum, address)
 VALUES
@@ -252,7 +252,7 @@ VALUES
 ('9015', 'Jonas Mais', '8769002548', '590 Express Lane');
 
 
-#----------------- Insert into Bike table ------------------
+----------------- Insert into Bike table ------------------
 
 insert into bike(serialNum, bikeID, bikeColor, fuelType, numDoors, ManuID, vendorID)
 VALUES
@@ -270,7 +270,7 @@ VALUES
 ('1090','3012','Blue','87',0,'5005',null);
 
 
-# ----------------- Insert into Car table ------------------
+ ----------------- Insert into Car table ------------------
 insert into car(serialNum, carID, carColor, fuelType, numDoors, ManuID, vendorID)
 VALUES
 ('1060','4001','Blue','90',4,'5003',null),
@@ -286,7 +286,7 @@ VALUES
 ('1040','4011','White','87', 4,null,'7011'),
 ('1030','4012','Blue','87',4,'5006',null);
     
-# ----------------- Insert into truck  table ------------------
+----------------- Insert into truck  table ------------------
 insert into truck(serialNum, truckID, truckColor, fuelType, numDoors, ManuID, vendorID)
 VALUES
 ('1150','6001','Red','Diesel',2,'5001',null),
@@ -302,7 +302,7 @@ VALUES
 ('1140','6011','Red','Diesel',2,'5004',null),
 ('1130','6012','White','Diesel',2,null,'7007');
 
-# ----------------- Views ------------------
+----------------- Views ------------------
 /** Discount given on vehicles sold**/
 Create View Discount as 
 Select make,model,(estimatedValue-total) as discount from vehicle
@@ -358,5 +358,5 @@ inner join vehicleparts
 on vehicleparts.serialNum = vehicle.serialNum
 where vendorID is not null;
 
-# ----------------- Indexes ------------------
-# ----------------- Stored Procedure ------------------
+----------------- Indexes ------------------
+----------------- Stored Procedure ------------------
