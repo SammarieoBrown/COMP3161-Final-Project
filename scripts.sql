@@ -384,3 +384,32 @@ on Customer(customerID,name,phoneNum);
 create unique index idx_mechanic
 on Mechanic(mechanicID ,name,phoneNum);
 /*********Stored Procedure***********/
+
+DROP PROCEDURE IF EXISTS dealership.add_data;
+
+DELIMITER $$
+
+CREATE PROCEDURE dealership.add_data 
+(IN serial_Num VARCHAR(10), 
+IN model_ VARCHAR(55), 
+IN year_ VARCHAR(4), 
+IN estimated_Value decimal(10,2), 
+IN make_ VARCHAR(55))
+BEGIN
+
+	INSERT INTO Vehicle (serialNum, model, year, estimatedValue, make)
+    VALUE (serial_Num, model_, year_, estimated_Value, make_);
+    
+    SELECT serialNum, model, year, estimatedValue, make
+    FROM Vehicle;
+    
+    
+
+END$$
+DELIMITER ;
+
+CALL add_data('12345', 'Evolution', '2023', 25000000.00, 'Mitsubishi');
+CALL add_data('12347', 'R8', '2023', 27000000.00, 'Audi');
+CALL add_data('12346', 'Supra', '2023', 30000000.00, 'Toyota');
+
+/*****Not Final*****/
