@@ -1,6 +1,8 @@
 /** Group 19
 Anna-Kay Graham-620127950
 Sammarieo Brown-620142596
+Joshua McIntosh-620130962
+Raphiel Collins-620128394
 **/
 Create database dealership;
 Use dealership;
@@ -416,5 +418,3 @@ DELIMITER ;
 CALL add_data('12345', 'Evolution', '2023', 25000000.00, 'Mitsubishi');
 CALL add_data('12347', 'R8', '2023', 27000000.00, 'Audi');
 CALL add_data('12346', 'Supra', '2023', 30000000.00, 'Toyota');
-
-/*****Not Final*****/
